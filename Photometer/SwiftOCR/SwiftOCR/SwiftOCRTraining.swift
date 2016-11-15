@@ -89,7 +89,13 @@ open class SwiftOCRTraining {
         }
     
         let randomFontAttributes: () -> [String:NSObject] = {
-            let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+            
+            #if os(iOS)
+                let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+            #else
+                let paragraphStyle = NSParagraphStyle.default().mutableCopy() as! NSMutableParagraphStyle
+            #endif
+            
             paragraphStyle.alignment = NSTextAlignment.center
             
             return [NSFontAttributeName: randomFont(),
@@ -110,7 +116,7 @@ open class SwiftOCRTraining {
             #if os(iOS)
                 return OCRImage(named: randomImageName(), in: Bundle(for: SwiftOCR.self), compatibleWith: nil)!.copy() as! OCRImage
             #else
-                return OCRImage(byReferencingURL: NSBundle(forClass: SwiftOCR.self).URLForResource(randomImageName(), withExtension: nil, subdirectory: nil, localization: nil)!).copy() as! OCRImage
+                return OCRImage(byReferencing: Bundle(for: SwiftOCR.self).url(forResource: randomImageName(), withExtension: nil, subdirectory: nil, localization: nil)!).copy() as! OCRImage
             #endif
         }
         
@@ -133,9 +139,9 @@ open class SwiftOCRTraining {
                 let randomImg = randomImage()
                 randomImg.lockFocus()
                 
-                randomImg.drawInRect(CGRect(origin: CGPoint.zero, size: randomImg.size))
+                randomImg.draw(in: CGRect(origin: CGPoint.zero, size: randomImg.size))
                 
-                NSString(string: code).drawInRect(CGRect(origin: CGPointMake(0 + randomFloat(5), -15.5 + randomFloat(5)), size: randomImg.size), withAttributes: randomFontAttributes())
+                NSString(string: code).draw(in: CGRect(origin: CGPoint(x: 0 + randomFloat(5), y: -15.5 + randomFloat(5)), size: randomImg.size), withAttributes: randomFontAttributes())
                 
                 randomImg.unlockFocus()
 

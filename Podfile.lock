@@ -1,23 +1,23 @@
 PODS:
   - OpenCV (3.1.0.1)
-  - Realm (2.0.4):
-    - Realm/Headers (= 2.0.4)
-  - Realm/Headers (2.0.4)
-  - RealmSwift (2.0.4):
-    - Realm (= 2.0.4)
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
   - SVProgressHUD (2.0.4)
 
 DEPENDENCIES:
   - OpenCV
-  - RealmSwift
+  - RealmSwift (= 2.0.3)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   OpenCV: 41c4250e2b06a394d6fbb634b5fa622cdd846018
-  Realm: 9da97f48365f8b99dd95c28d45ad8222d62e1775
-  RealmSwift: 01e8db006035f16003e6307ae8eae1adccce68db
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
 
-PODFILE CHECKSUM: d4cfc7f6f76d3a3171ee4ed143c0530ecc4fc06d
+PODFILE CHECKSUM: 43d2180d2c66e51eb699b5e1e8e98349c3623150
 
 COCOAPODS: 1.2.0.beta.1
