@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15AF22161DD74AA0006E91AA /* NumbersRecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */; };
+		15D420771DD644B0004117C9 /* Meter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420761DD644B0004117C9 /* Meter.swift */; };
+		15D420791DD647FD004117C9 /* MetersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420781DD647FD004117C9 /* MetersViewController.swift */; };
+		15D4207B1DD64AE0004117C9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */; };
+		15D4207D1DD65208004117C9 /* MeterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */; };
+		15F713011DCA211C00DC11AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F713001DCA211C00DC11AA /* AppDelegate.swift */; };
+		15F713031DCA211C00DC11AA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F713021DCA211C00DC11AA /* CameraViewController.swift */; };
+		15F713061DCA211C00DC11AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F713041DCA211C00DC11AA /* Main.storyboard */; };
+		15F713081DCA211C00DC11AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15F713071DCA211C00DC11AA /* Assets.xcassets */; };
+		15F7130B1DCA211C00DC11AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F713091DCA211C00DC11AA /* LaunchScreen.storyboard */; };
+		15F713161DCA211C00DC11AA /* PhotometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F713151DCA211C00DC11AA /* PhotometerTests.swift */; };
+		15F713211DCA211C00DC11AA /* PhotometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F713201DCA211C00DC11AA /* PhotometerUITests.swift */; };
+		15F713341DCA225300DC11AA /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15F713331DCA225300DC11AA /* OpenCV.mm */; };
+		4A713D2959A768DC8BD49841 /* Pods_Photometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC30D076529B403C52F15509 /* Pods_Photometer.framework */; };
+		4DFBDBADED1FE556EFC4024C /* Pods_PhotometerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6830EFF79905A3896AC0AA7B /* Pods_PhotometerUITests.framework */; };
+		A95487FDCF55E3202F4CE3D1 /* Pods_PhotometerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE17EFF81289AFFA91CC65A /* Pods_PhotometerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15F713121DCA211C00DC11AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15F712F51DCA211C00DC11AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F712FC1DCA211C00DC11AA;
+			remoteInfo = Photometer;
+		};
+		15F7131D1DCA211C00DC11AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15F712F51DCA211C00DC11AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F712FC1DCA211C00DC11AA;
+			remoteInfo = Photometer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15F3FF891DCA5526003DDBEB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersRecognizeViewController.swift; sourceTree = "<group>"; };
+		15D420761DD644B0004117C9 /* Meter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meter.swift; sourceTree = "<group>"; };
+		15D420781DD647FD004117C9 /* MetersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetersViewController.swift; sourceTree = "<group>"; };
+		15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterDetailsViewController.swift; sourceTree = "<group>"; };
+		15F712FD1DCA211C00DC11AA /* Photometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F713001DCA211C00DC11AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15F713021DCA211C00DC11AA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		15F713051DCA211C00DC11AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15F713071DCA211C00DC11AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15F7130A1DCA211C00DC11AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15F7130C1DCA211C00DC11AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F713111DCA211C00DC11AA /* PhotometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F713151DCA211C00DC11AA /* PhotometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotometerTests.swift; sourceTree = "<group>"; };
+		15F713171DCA211C00DC11AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F7131C1DCA211C00DC11AA /* PhotometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F713201DCA211C00DC11AA /* PhotometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotometerUITests.swift; sourceTree = "<group>"; };
+		15F713221DCA211C00DC11AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F713311DCA225300DC11AA /* Photometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photometer-Bridging-Header.h"; sourceTree = "<group>"; };
+		15F713321DCA225300DC11AA /* OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCV.h; sourceTree = "<group>"; };
+		15F713331DCA225300DC11AA /* OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCV.mm; sourceTree = "<group>"; };
+		4B9DF36D78BF21ED613ABEA8 /* Pods-PhotometerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerTests/Pods-PhotometerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6830EFF79905A3896AC0AA7B /* Pods_PhotometerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotometerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B699E7D2ECC9EB7B6CCD69 /* Pods-PhotometerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9FE17EFF81289AFFA91CC65A /* Pods_PhotometerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotometerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A970AF3C7C9D9E9C94D71F24 /* Pods-Photometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photometer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photometer/Pods-Photometer.release.xcconfig"; sourceTree = "<group>"; };
+		D15B8447A0941B94CC05B3FD /* Pods-Photometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photometer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photometer/Pods-Photometer.debug.xcconfig"; sourceTree = "<group>"; };
+		DC30D076529B403C52F15509 /* Pods_Photometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D4B6181DAC1D74E1D8AB33 /* Pods-PhotometerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerTests/Pods-PhotometerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15F712FA1DCA211C00DC11AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A713D2959A768DC8BD49841 /* Pods_Photometer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F7130E1DCA211C00DC11AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95487FDCF55E3202F4CE3D1 /* Pods_PhotometerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F713191DCA211C00DC11AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFBDBADED1FE556EFC4024C /* Pods_PhotometerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1510E5581DCE1AE7005239B1 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				15F713021DCA211C00DC11AA /* CameraViewController.swift */,
+				15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */,
+				15F713001DCA211C00DC11AA /* AppDelegate.swift */,
+				15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */,
+				15D420781DD647FD004117C9 /* MetersViewController.swift */,
+				15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */,
+				15D420751DD6449D004117C9 /* Model */,
+				1510E55A1DCE1B18005239B1 /* OpenCV */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		1510E5591DCE1AF3005239B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15F713041DCA211C00DC11AA /* Main.storyboard */,
+				15F713071DCA211C00DC11AA /* Assets.xcassets */,
+				15F713091DCA211C00DC11AA /* LaunchScreen.storyboard */,
+				15F7130C1DCA211C00DC11AA /* Info.plist */,
+				15F713311DCA225300DC11AA /* Photometer-Bridging-Header.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1510E55A1DCE1B18005239B1 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				15F713321DCA225300DC11AA /* OpenCV.h */,
+				15F713331DCA225300DC11AA /* OpenCV.mm */,
+			);
+			name = OpenCV;
+			sourceTree = "<group>";
+		};
+		15D420751DD6449D004117C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15D420761DD644B0004117C9 /* Meter.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		15F712F41DCA211C00DC11AA = {
+			isa = PBXGroup;
+			children = (
+				15F712FF1DCA211C00DC11AA /* Photometer */,
+				15F713141DCA211C00DC11AA /* PhotometerTests */,
+				15F7131F1DCA211C00DC11AA /* PhotometerUITests */,
+				15F712FE1DCA211C00DC11AA /* Products */,
+				CFA85AF4AD827259489C8139 /* Pods */,
+				436F6DDEC723ADB659B16D58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15F712FE1DCA211C00DC11AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15F712FD1DCA211C00DC11AA /* Photometer.app */,
+				15F713111DCA211C00DC11AA /* PhotometerTests.xctest */,
+				15F7131C1DCA211C00DC11AA /* PhotometerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15F712FF1DCA211C00DC11AA /* Photometer */ = {
+			isa = PBXGroup;
+			children = (
+				1510E5581DCE1AE7005239B1 /* Code */,
+				1510E5591DCE1AF3005239B1 /* Resources */,
+			);
+			path = Photometer;
+			sourceTree = "<group>";
+		};
+		15F713141DCA211C00DC11AA /* PhotometerTests */ = {
+			isa = PBXGroup;
+			children = (
+				15F713151DCA211C00DC11AA /* PhotometerTests.swift */,
+				15F713171DCA211C00DC11AA /* Info.plist */,
+			);
+			path = PhotometerTests;
+			sourceTree = "<group>";
+		};
+		15F7131F1DCA211C00DC11AA /* PhotometerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15F713201DCA211C00DC11AA /* PhotometerUITests.swift */,
+				15F713221DCA211C00DC11AA /* Info.plist */,
+			);
+			path = PhotometerUITests;
+			sourceTree = "<group>";
+		};
+		436F6DDEC723ADB659B16D58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC30D076529B403C52F15509 /* Pods_Photometer.framework */,
+				9FE17EFF81289AFFA91CC65A /* Pods_PhotometerTests.framework */,
+				6830EFF79905A3896AC0AA7B /* Pods_PhotometerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFA85AF4AD827259489C8139 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D15B8447A0941B94CC05B3FD /* Pods-Photometer.debug.xcconfig */,
+				A970AF3C7C9D9E9C94D71F24 /* Pods-Photometer.release.xcconfig */,
+				4B9DF36D78BF21ED613ABEA8 /* Pods-PhotometerTests.debug.xcconfig */,
+				E6D4B6181DAC1D74E1D8AB33 /* Pods-PhotometerTests.release.xcconfig */,
+				10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */,
+				89B699E7D2ECC9EB7B6CCD69 /* Pods-PhotometerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15F712FC1DCA211C00DC11AA /* Photometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F713251DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "Photometer" */;
+			buildPhases = (
+				E24C67133B142B313E63CADD /* [CP] Check Pods Manifest.lock */,
+				15F712F91DCA211C00DC11AA /* Sources */,
+				15F712FA1DCA211C00DC11AA /* Frameworks */,
+				15F712FB1DCA211C00DC11AA /* Resources */,
+				62A7C8E8625256E6F9DF15FD /* [CP] Embed Pods Frameworks */,
+				CE50035EE2C5AA912B99B62A /* [CP] Copy Pods Resources */,
+				15F3FF891DCA5526003DDBEB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Photometer;
+			productName = Photometer;
+			productReference = 15F712FD1DCA211C00DC11AA /* Photometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15F713101DCA211C00DC11AA /* PhotometerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F713281DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "PhotometerTests" */;
+			buildPhases = (
+				8529BF0CC31FBADFA1AF51EE /* [CP] Check Pods Manifest.lock */,
+				15F7130D1DCA211C00DC11AA /* Sources */,
+				15F7130E1DCA211C00DC11AA /* Frameworks */,
+				15F7130F1DCA211C00DC11AA /* Resources */,
+				D4246FAC91C7E25056462ED5 /* [CP] Embed Pods Frameworks */,
+				D9F8473C9D62E3F6F2627AC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15F713131DCA211C00DC11AA /* PBXTargetDependency */,
+			);
+			name = PhotometerTests;
+			productName = PhotometerTests;
+			productReference = 15F713111DCA211C00DC11AA /* PhotometerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15F7131B1DCA211C00DC11AA /* PhotometerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F7132B1DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "PhotometerUITests" */;
+			buildPhases = (
+				3C8311D9FEC4AE15B6576507 /* [CP] Check Pods Manifest.lock */,
+				15F713181DCA211C00DC11AA /* Sources */,
+				15F713191DCA211C00DC11AA /* Frameworks */,
+				15F7131A1DCA211C00DC11AA /* Resources */,
+				7608792CF60C1686E224F800 /* [CP] Copy Pods Resources */,
+				1ECACE11669CB687C3196113 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15F7131E1DCA211C00DC11AA /* PBXTargetDependency */,
+			);
+			name = PhotometerUITests;
+			productName = PhotometerUITests;
+			productReference = 15F7131C1DCA211C00DC11AA /* PhotometerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15F712F51DCA211C00DC11AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Wojtek;
+				TargetAttributes = {
+					15F712FC1DCA211C00DC11AA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HU9FKSEQXD;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					15F713101DCA211C00DC11AA = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15F712FC1DCA211C00DC11AA;
+					};
+					15F7131B1DCA211C00DC11AA = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15F712FC1DCA211C00DC11AA;
+					};
+				};
+			};
+			buildConfigurationList = 15F712F81DCA211C00DC11AA /* Build configuration list for PBXProject "Photometer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15F712F41DCA211C00DC11AA;
+			productRefGroup = 15F712FE1DCA211C00DC11AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15F712FC1DCA211C00DC11AA /* Photometer */,
+				15F713101DCA211C00DC11AA /* PhotometerTests */,
+				15F7131B1DCA211C00DC11AA /* PhotometerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15F712FB1DCA211C00DC11AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F7130B1DCA211C00DC11AA /* LaunchScreen.storyboard in Resources */,
+				15F713081DCA211C00DC11AA /* Assets.xcassets in Resources */,
+				15F713061DCA211C00DC11AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F7130F1DCA211C00DC11AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F7131A1DCA211C00DC11AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ECACE11669CB687C3196113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C8311D9FEC4AE15B6576507 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62A7C8E8625256E6F9DF15FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photometer/Pods-Photometer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7608792CF60C1686E224F800 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8529BF0CC31FBADFA1AF51EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE50035EE2C5AA912B99B62A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photometer/Pods-Photometer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4246FAC91C7E25056462ED5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotometerTests/Pods-PhotometerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F8473C9D62E3F6F2627AC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotometerTests/Pods-PhotometerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E24C67133B142B313E63CADD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15F712F91DCA211C00DC11AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15AF22161DD74AA0006E91AA /* NumbersRecognizeViewController.swift in Sources */,
+				15F713031DCA211C00DC11AA /* CameraViewController.swift in Sources */,
+				15F713011DCA211C00DC11AA /* AppDelegate.swift in Sources */,
+				15D4207B1DD64AE0004117C9 /* DatabaseManager.swift in Sources */,
+				15F713341DCA225300DC11AA /* OpenCV.mm in Sources */,
+				15D4207D1DD65208004117C9 /* MeterDetailsViewController.swift in Sources */,
+				15D420771DD644B0004117C9 /* Meter.swift in Sources */,
+				15D420791DD647FD004117C9 /* MetersViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F7130D1DCA211C00DC11AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F713161DCA211C00DC11AA /* PhotometerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F713181DCA211C00DC11AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F713211DCA211C00DC11AA /* PhotometerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15F713131DCA211C00DC11AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15F712FC1DCA211C00DC11AA /* Photometer */;
+			targetProxy = 15F713121DCA211C00DC11AA /* PBXContainerItemProxy */;
+		};
+		15F7131E1DCA211C00DC11AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15F712FC1DCA211C00DC11AA /* Photometer */;
+			targetProxy = 15F7131D1DCA211C00DC11AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15F713041DCA211C00DC11AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15F713051DCA211C00DC11AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15F713091DCA211C00DC11AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15F7130A1DCA211C00DC11AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15F713231DCA211C00DC11AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15F713241DCA211C00DC11AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15F713261DCA211C00DC11AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15B8447A0941B94CC05B3FD /* Pods-Photometer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HU9FKSEQXD;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Photometer",
+				);
+				INFOPLIST_FILE = Photometer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.Photometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photometer/Photometer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		15F713271DCA211C00DC11AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A970AF3C7C9D9E9C94D71F24 /* Pods-Photometer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HU9FKSEQXD;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Photometer",
+				);
+				INFOPLIST_FILE = Photometer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.Photometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photometer/Photometer-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		15F713291DCA211C00DC11AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9DF36D78BF21ED613ABEA8 /* Pods-PhotometerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PhotometerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photometer.app/Photometer";
+			};
+			name = Debug;
+		};
+		15F7132A1DCA211C00DC11AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D4B6181DAC1D74E1D8AB33 /* Pods-PhotometerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PhotometerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photometer.app/Photometer";
+			};
+			name = Release;
+		};
+		15F7132C1DCA211C00DC11AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PhotometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Photometer;
+			};
+			name = Debug;
+		};
+		15F7132D1DCA211C00DC11AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B699E7D2ECC9EB7B6CCD69 /* Pods-PhotometerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PhotometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Photometer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15F712F81DCA211C00DC11AA /* Build configuration list for PBXProject "Photometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F713231DCA211C00DC11AA /* Debug */,
+				15F713241DCA211C00DC11AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F713251DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "Photometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F713261DCA211C00DC11AA /* Debug */,
+				15F713271DCA211C00DC11AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F713281DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "PhotometerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F713291DCA211C00DC11AA /* Debug */,
+				15F7132A1DCA211C00DC11AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F7132B1DCA211C00DC11AA /* Build configuration list for PBXNativeTarget "PhotometerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F7132C1DCA211C00DC11AA /* Debug */,
+				15F7132D1DCA211C00DC11AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15F712F51DCA211C00DC11AA /* Project object */;
+}
