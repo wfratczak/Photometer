@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Numbers Recognize View Controller-->
+        <!--Recognize-->
         <scene sceneID="hVe-FP-2gK">
             <objects>
-                <viewController id="aFI-wP-dzQ" customClass="NumbersRecognizeViewController" customModule="Photometer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aFI-wP-dzQ" customClass="CameraViewController" customModule="Photometer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kfy-Re-4oz"/>
                         <viewControllerLayoutGuide type="bottom" id="scn-CU-x1P"/>
@@ -28,11 +28,6 @@
                                     <constraint firstAttribute="width" secondItem="vwN-ua-quj" secondAttribute="height" multiplier="400:110" id="Ylk-FR-oF3"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-PO-4AX">
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75r-hg-vLV">
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="I11-Q4-Uc3"/>
@@ -57,28 +52,25 @@
                             <constraint firstItem="vwN-ua-quj" firstAttribute="centerY" secondItem="GyW-Qg-6hT" secondAttribute="centerY" id="CfJ-zB-lJc"/>
                             <constraint firstItem="4W6-AG-Grx" firstAttribute="leading" secondItem="GyW-Qg-6hT" secondAttribute="leadingMargin" id="DyO-rt-8bk"/>
                             <constraint firstItem="j5P-v1-Dtf" firstAttribute="top" secondItem="kfy-Re-4oz" secondAttribute="bottom" constant="-20" id="Gob-QQ-aZy"/>
-                            <constraint firstItem="hCc-PO-4AX" firstAttribute="top" secondItem="kfy-Re-4oz" secondAttribute="bottom" constant="20" id="K08-ke-0dF"/>
-                            <constraint firstItem="hCc-PO-4AX" firstAttribute="leading" secondItem="GyW-Qg-6hT" secondAttribute="leadingMargin" id="Lb3-7A-I2j"/>
                             <constraint firstItem="75r-hg-vLV" firstAttribute="top" secondItem="4W6-AG-Grx" secondAttribute="bottom" constant="8" id="MuA-LW-edM"/>
                             <constraint firstItem="scn-CU-x1P" firstAttribute="top" secondItem="75r-hg-vLV" secondAttribute="bottom" constant="20" id="W9t-eX-2ON"/>
                             <constraint firstItem="scn-CU-x1P" firstAttribute="top" secondItem="j5P-v1-Dtf" secondAttribute="bottom" id="aMG-n8-neU"/>
                             <constraint firstAttribute="trailing" secondItem="j5P-v1-Dtf" secondAttribute="trailing" id="ast-DN-kdK"/>
                             <constraint firstItem="4W6-AG-Grx" firstAttribute="trailing" secondItem="GyW-Qg-6hT" secondAttribute="trailingMargin" id="dmL-cX-ZZa"/>
                             <constraint firstItem="j5P-v1-Dtf" firstAttribute="leading" secondItem="GyW-Qg-6hT" secondAttribute="leading" id="fqU-D3-GFz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hCc-PO-4AX" secondAttribute="trailing" id="iR0-z7-9g7"/>
                             <constraint firstAttribute="trailing" secondItem="vwN-ua-quj" secondAttribute="trailing" id="rlE-Mh-CwC"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Recognize" id="yqI-Pz-f2e"/>
                     <connections>
                         <outlet property="cameraView" destination="j5P-v1-Dtf" id="vGg-Ya-d3T"/>
-                        <outlet property="label" destination="hCc-PO-4AX" id="QHH-zO-8EE"/>
                         <outlet property="slider" destination="4W6-AG-Grx" id="deH-Og-Wf8"/>
                         <outlet property="viewFinder" destination="vwN-ua-quj" id="r1M-tF-Fvn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOW-lQ-K6p" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1862" y="227"/>
+            <point key="canvasLocation" x="-2988" y="-126"/>
         </scene>
         <!--Meters-->
         <scene sceneID="xU0-sB-mZq">
@@ -108,14 +100,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="JBB-wL-RTG" kind="relationship" relationship="viewControllers" id="ajA-Rv-Hdf"/>
-                        <segue destination="ftm-kY-50r" kind="relationship" relationship="viewControllers" id="vzz-hs-eAH"/>
+                        <segue destination="aFI-wP-dzQ" kind="relationship" relationship="viewControllers" id="sml-d4-Kra"/>
                         <segue destination="5qT-Lt-Pwv" kind="relationship" relationship="viewControllers" id="9RU-AC-GBu"/>
                         <segue destination="dRU-yg-Kmj" kind="relationship" relationship="viewControllers" id="5pl-Tf-PdJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAt-9y-Tyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4735" y="1246"/>
+            <point key="canvasLocation" x="-4127" y="-126"/>
         </scene>
         <!--Meters View Controller-->
         <scene sceneID="ubg-J7-wax">
@@ -178,9 +170,7 @@
                                     <action selector="addPhotoButtonAction:" destination="lbM-WB-Qdr" eventType="touchUpInside" id="yUR-CE-wcq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjS-vb-4u7">
-                                <frame key="frameInset" minX="47" minY="110" width="281" height="164"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjS-vb-4u7"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -194,68 +184,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="meterPhotoImageView" destination="pjS-vb-4u7" id="bOf-yV-2Qn"/>
+                        <outlet property="meterPhotoImageView" destination="pjS-vb-4u7" id="Jtl-6p-qn4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRj-c1-3b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-921" y="-813"/>
-        </scene>
-        <!--Recognize-->
-        <scene sceneID="Wtq-L3-aRu">
-            <objects>
-                <viewController id="ftm-kY-50r" customClass="CameraViewController" customModule="Photometer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="44E-vu-xU6"/>
-                        <viewControllerLayoutGuide type="bottom" id="LPC-X3-Ntw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QyF-GZ-ESW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-mi-XWm" userLabel="Camera View">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSe-Qm-n7k">
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="D8p-6B-KUd"/>
-                                    <constraint firstAttribute="height" constant="80" id="a1R-fz-7TK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="takePhotoButtonPressed:" destination="ftm-kY-50r" eventType="touchUpInside" id="8z7-Ye-dzf"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-qI-7A0">
-                                <connections>
-                                    <action selector="sliderValueDidChange:" destination="ftm-kY-50r" eventType="valueChanged" id="TWR-lP-aTd"/>
-                                </connections>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qVv-mi-XWm" secondAttribute="trailing" id="41n-wF-6ds"/>
-                            <constraint firstItem="zlK-qI-7A0" firstAttribute="leading" secondItem="QyF-GZ-ESW" secondAttribute="leadingMargin" id="CTB-y3-jVE"/>
-                            <constraint firstItem="zlK-qI-7A0" firstAttribute="trailing" secondItem="QyF-GZ-ESW" secondAttribute="trailingMargin" id="ChN-7d-Rje"/>
-                            <constraint firstItem="QSe-Qm-n7k" firstAttribute="centerX" secondItem="QyF-GZ-ESW" secondAttribute="centerX" id="GDC-a1-C7o"/>
-                            <constraint firstItem="qVv-mi-XWm" firstAttribute="leading" secondItem="QyF-GZ-ESW" secondAttribute="leading" id="Gh0-QB-doJ"/>
-                            <constraint firstItem="QSe-Qm-n7k" firstAttribute="top" secondItem="zlK-qI-7A0" secondAttribute="bottom" constant="8" id="Zp8-Gd-X7J"/>
-                            <constraint firstItem="LPC-X3-Ntw" firstAttribute="top" secondItem="QSe-Qm-n7k" secondAttribute="bottom" constant="20" id="aay-jc-dc4"/>
-                            <constraint firstItem="LPC-X3-Ntw" firstAttribute="top" secondItem="qVv-mi-XWm" secondAttribute="bottom" id="gfo-Zn-Xhu"/>
-                            <constraint firstItem="qVv-mi-XWm" firstAttribute="top" secondItem="44E-vu-xU6" secondAttribute="bottom" constant="-20" id="xmr-pS-hbv"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Recognize" id="Zgp-01-Nym"/>
-                    <connections>
-                        <outlet property="cameraView" destination="qVv-mi-XWm" id="tqd-4R-DcB"/>
-                        <outlet property="slider" destination="zlK-qI-7A0" id="ROa-js-8MW"/>
-                        <segue destination="aFI-wP-dzQ" kind="show" id="pCs-Tl-g9Q"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FM7-4s-Re2" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2988" y="228"/>
         </scene>
         <!--Charts-->
         <scene sceneID="lXS-fU-IcM">
@@ -274,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN9-Q5-nyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2988" y="1010"/>
+            <point key="canvasLocation" x="-2988" y="545"/>
         </scene>
         <!--About-->
         <scene sceneID="cFY-uZ-XVK">
@@ -293,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IO9-Ae-aXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2988" y="1679"/>
+            <point key="canvasLocation" x="-2988" y="1237"/>
         </scene>
     </scenes>
 </document>

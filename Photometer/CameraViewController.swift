@@ -10,36 +10,36 @@ import UIKit
 import SVProgressHUD
 import AVFoundation
 import RealmSwift
+import SwiftOCR
+
+enum CameraViewType {
+    case meter
+    case values
+}
 
 class CameraViewController: UIViewController {
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var viewFinder: UIView!
     
+    var viewType: CameraViewType = .meter {
+        didSet {
+            viewFinder.isHidden = viewType == .meter
+        }
+    }
     var stillImageOutput: AVCaptureStillImageOutput!
     let captureSession = AVCaptureSession()
     let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewFinder.isHidden = true
         DispatchQueue.global().async {
             if(self.device != nil){
                 self.beginSession()
             }
         }
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        if !captureSession.isRunning {
-//            captureSession.startRunning()
-//        }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        //captureSession.stopRunning()
     }
     
     // MARK: AVFoundation
@@ -114,48 +114,64 @@ class CameraViewController: UIViewController {
             guard let buffer = buffer, let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer), let image = UIImage(data: imageData) else {
                 return
             }
-            SVProgressHUD.show()
-            let realm = try! Realm()
-            let meters = Array(realm.objects(Meter.self))
-            var recognizedIndex = 0
-            var max = 0.0
-            for (index, meter) in meters.enumerated() {
-                    let result = OpenCV.compare(image, with: meter.image)
-                    print("Reult for meter name: \(meter.name) \(result)")
-                    if (result?.first?.doubleValue)! > max {
-                        recognizedIndex = index
-                        max = (result?.first?.doubleValue)!
-                    }
-            }
-            SVProgressHUD.dismiss()
-            DispatchQueue.main.async {
-                self.show(meterName: meters[recognizedIndex].name)
-            }
-//            DispatchQueue.main.async {
-//                let result = OpenCV.compare(image, with: #imageLiteral(resourceName: "counter-water-17718527"))
-//                
-//                self.show(result: result!)
-//            }
             
-//            let croppedImage = self.cropImage(image)
-//            
-//            let ocrInstance = SwiftOCR()
-//            ocrInstance.characterWhiteList = "0123456789"
-//            ocrInstance.recognize(croppedImage) { recognizedString in
-//                DispatchQueue.main.async(execute: {
-//                    self.label.text = recognizedString
-//                    print(ocrInstance.currentOCRRecognizedBlobs)
-//                })
-//            }
-            
+            switch self.viewType {
+            case .meter:
+                self.recognizeMeter(image: image)
+            case .values:
+                self.recognizeValues(image: image)
+            }
         }
+    }
+    
+    private func recognizeMeter(image: UIImage) {
+        let realm = try! Realm()
+        let meters = Array(realm.objects(Meter.self))
+        var recognizedIndex = 0
+        var max = 0.0
+        for (index, meter) in meters.enumerated() {
+            let result = OpenCV.compare(image, with: meter.image)
+            print("Reult for meter name: \(meter.name) \(result)")
+            if (result?.first?.doubleValue)! > max {
+                recognizedIndex = index
+                max = (result?.first?.doubleValue)!
+            }
+        }
+        DispatchQueue.main.async {
+            self.show(meterName: meters[recognizedIndex].name)
+        }
+    }
+    
+    private func recognizeValues(image: UIImage) {
+        let croppedImage = self.cropImage(image)
+        
+        let ocrInstance = SwiftOCR()
+        ocrInstance.recognize(croppedImage) { recognizedString in
+            DispatchQueue.main.async(execute: {
+                self.show(meterValue: recognizedString)
+            })
+        }
+    }
+    
+    func show(meterValue: String) {
+        let alert = UIAlertController(title: "Recognized value", message: "\(meterValue)", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = meterValue
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.viewType = .meter
+        }))
+        alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
+        self.tabBarController?.show(alert, sender: self)
     }
     
     func show(meterName: String) {
         let alert = UIAlertController(title: "Recognized meter", message: "\(meterName)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.viewType = .values
+        }))
         alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
-        show(alert, sender: self)
+        self.tabBarController?.show(alert, sender: self)
     }
     
     func show(result: [NSNumber]) {

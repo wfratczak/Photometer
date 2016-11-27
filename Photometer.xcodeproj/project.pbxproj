@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15913E601DDBB02F008F3E2E /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */; };
-		15913EAF1DDBB517008F3E2E /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15913EAE1DDBB4FB008F3E2E /* GPUImage.framework */; };
-		15913EB01DDBB517008F3E2E /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15913EAE1DDBB4FB008F3E2E /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15913EB31DDBB517008F3E2E /* SwiftOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15913E9E1DDBB4F3008F3E2E /* SwiftOCR.framework */; };
-		15913EB41DDBB517008F3E2E /* SwiftOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15913E9E1DDBB4F3008F3E2E /* SwiftOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15AF22161DD74AA0006E91AA /* NumbersRecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */; };
 		15D420771DD644B0004117C9 /* Meter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420761DD644B0004117C9 /* Meter.swift */; };
 		15D420791DD647FD004117C9 /* MetersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420781DD647FD004117C9 /* MetersViewController.swift */; };
@@ -31,62 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		15913E9D1DDBB4F3008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 373ED0AF1CC9071C00C4758B;
-			remoteInfo = SwiftOCR;
-		};
-		15913E9F1DDBB4F3008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 373ED0B91CC9071D00C4758B;
-			remoteInfo = SwiftOCRTests;
-		};
-		15913EA11DDBB4F3008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 373ED0E61CC909A500C4758B;
-			remoteInfo = "SwiftOCR Mac";
-		};
-		15913EA31DDBB4F3008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 373ED0EF1CC909A500C4758B;
-			remoteInfo = "SwiftOCR MacTests";
-		};
-		15913EAB1DDBB4FB008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		15913EAD1DDBB4FB008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCE209E51943F20C002FEED8;
-			remoteInfo = GPUImageFramework;
-		};
-		15913EB11DDBB517008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCE209E41943F20C002FEED8;
-			remoteInfo = GPUImageFramework;
-		};
-		15913EB51DDBB517008F3E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 373ED0AE1CC9071C00C4758B;
-			remoteInfo = SwiftOCR;
-		};
 		15F713121DCA211C00DC11AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15F712F51DCA211C00DC11AA /* Project object */;
@@ -110,8 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				15913EB01DDBB517008F3E2E /* GPUImage.framework in Embed Frameworks */,
-				15913EB41DDBB517008F3E2E /* SwiftOCR.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,8 +59,6 @@
 /* Begin PBXFileReference section */
 		10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftOCR.xcodeproj; path = SwiftOCR/SwiftOCR.xcodeproj; sourceTree = "<group>"; };
-		15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "SwiftOCR/SwiftOCR/GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersRecognizeViewController.swift; sourceTree = "<group>"; };
 		15D420761DD644B0004117C9 /* Meter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meter.swift; sourceTree = "<group>"; };
 		15D420781DD647FD004117C9 /* MetersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetersViewController.swift; sourceTree = "<group>"; };
@@ -159,9 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15913EB31DDBB517008F3E2E /* SwiftOCR.framework in Frameworks */,
 				4A713D2959A768DC8BD49841 /* Pods_Photometer.framework in Frameworks */,
-				15913EAF1DDBB517008F3E2E /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,14 +121,10 @@
 		1510E5581DCE1AE7005239B1 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				15F713021DCA211C00DC11AA /* CameraViewController.swift */,
-				15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */,
 				15F713001DCA211C00DC11AA /* AppDelegate.swift */,
-				15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */,
-				15D420781DD647FD004117C9 /* MetersViewController.swift */,
-				15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */,
-				15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */,
-				15D420751DD6449D004117C9 /* Model */,
+				15E7AEF01DEB34520096CEAA /* ViewController */,
+				15E7AEEF1DEB344D0096CEAA /* View */,
+				15E7AEEE1DEB34480096CEAA /* Model */,
 				1510E55A1DCE1B18005239B1 /* OpenCV */,
 			);
 			name = Code;
@@ -221,41 +151,32 @@
 			name = OpenCV;
 			sourceTree = "<group>";
 		};
-		15913E7C1DDBB25B008F3E2E /* SwiftOCR */ = {
+		15E7AEEE1DEB34480096CEAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */,
-				15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */,
-			);
-			name = SwiftOCR;
-			sourceTree = "<group>";
-		};
-		15913E951DDBB4F2008F3E2E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				15913E9E1DDBB4F3008F3E2E /* SwiftOCR.framework */,
-				15913EA01DDBB4F3008F3E2E /* SwiftOCRTests.xctest */,
-				15913EA21DDBB4F3008F3E2E /* SwiftOCR.framework */,
-				15913EA41DDBB4F3008F3E2E /* SwiftOCR MacTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		15913EA61DDBB4FB008F3E2E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				15913EAC1DDBB4FB008F3E2E /* libGPUImage.a */,
-				15913EAE1DDBB4FB008F3E2E /* GPUImage.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		15D420751DD6449D004117C9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */,
 				15D420761DD644B0004117C9 /* Meter.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		15E7AEEF1DEB344D0096CEAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		15E7AEF01DEB34520096CEAA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15F713021DCA211C00DC11AA /* CameraViewController.swift */,
+				15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */,
+				15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */,
+				15D420781DD647FD004117C9 /* MetersViewController.swift */,
+				15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		15F712F41DCA211C00DC11AA = {
@@ -283,7 +204,6 @@
 		15F712FF1DCA211C00DC11AA /* Photometer */ = {
 			isa = PBXGroup;
 			children = (
-				15913E7C1DDBB25B008F3E2E /* SwiftOCR */,
 				1510E5581DCE1AE7005239B1 /* Code */,
 				1510E5591DCE1AF3005239B1 /* Resources */,
 			);
@@ -349,8 +269,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				15913EB21DDBB517008F3E2E /* PBXTargetDependency */,
-				15913EB61DDBB517008F3E2E /* PBXTargetDependency */,
 			);
 			name = Photometer;
 			productName = Photometer;
@@ -440,16 +358,6 @@
 			mainGroup = 15F712F41DCA211C00DC11AA;
 			productRefGroup = 15F712FE1DCA211C00DC11AA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 15913EA61DDBB4FB008F3E2E /* Products */;
-					ProjectRef = 15913EA51DDBB4FB008F3E2E /* GPUImage.xcodeproj */;
-				},
-				{
-					ProductGroup = 15913E951DDBB4F2008F3E2E /* Products */;
-					ProjectRef = 15913E941DDBB4F2008F3E2E /* SwiftOCR.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				15F712FC1DCA211C00DC11AA /* Photometer */,
@@ -458,51 +366,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		15913E9E1DDBB4F3008F3E2E /* SwiftOCR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftOCR.framework;
-			remoteRef = 15913E9D1DDBB4F3008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15913EA01DDBB4F3008F3E2E /* SwiftOCRTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftOCRTests.xctest;
-			remoteRef = 15913E9F1DDBB4F3008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15913EA21DDBB4F3008F3E2E /* SwiftOCR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftOCR.framework;
-			remoteRef = 15913EA11DDBB4F3008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15913EA41DDBB4F3008F3E2E /* SwiftOCR MacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SwiftOCR MacTests.xctest";
-			remoteRef = 15913EA31DDBB4F3008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15913EAC1DDBB4FB008F3E2E /* libGPUImage.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGPUImage.a;
-			remoteRef = 15913EAB1DDBB4FB008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15913EAE1DDBB4FB008F3E2E /* GPUImage.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GPUImage.framework;
-			remoteRef = 15913EAD1DDBB4FB008F3E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		15F712FB1DCA211C00DC11AA /* Resources */ = {
@@ -705,16 +568,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		15913EB21DDBB517008F3E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImageFramework;
-			targetProxy = 15913EB11DDBB517008F3E2E /* PBXContainerItemProxy */;
-		};
-		15913EB61DDBB517008F3E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftOCR;
-			targetProxy = 15913EB51DDBB517008F3E2E /* PBXContainerItemProxy */;
-		};
 		15F713131DCA211C00DC11AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 15F712FC1DCA211C00DC11AA /* Photometer */;

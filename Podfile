@@ -8,6 +8,7 @@ target 'Photometer' do
     pod 'OpenCV', :inhibit_warnings => true
     pod 'SVProgressHUD'
     pod 'RealmSwift', '2.0.3'
+    pod 'SwiftOCR', '~> 1.0'
 
   target 'PhotometerTests' do
     inherit! :search_paths

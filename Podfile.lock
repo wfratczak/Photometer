@@ -1,4 +1,5 @@
 PODS:
+  - GPUImage (0.1.7)
   - OpenCV (3.1.0.1)
   - Realm (2.0.3):
     - Realm/Headers (= 2.0.3)
@@ -6,18 +7,23 @@ PODS:
   - RealmSwift (2.0.3):
     - Realm (= 2.0.3)
   - SVProgressHUD (2.0.4)
+  - SwiftOCR (1.0):
+    - GPUImage
 
 DEPENDENCIES:
   - OpenCV
   - RealmSwift (= 2.0.3)
   - SVProgressHUD
+  - SwiftOCR (~> 1.0)
 
 SPEC CHECKSUMS:
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   OpenCV: 41c4250e2b06a394d6fbb634b5fa622cdd846018
   Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
   RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+  SwiftOCR: c0965eee5761acf3c780ba2c90020dc1c59de7a1
 
-PODFILE CHECKSUM: 43d2180d2c66e51eb699b5e1e8e98349c3623150
+PODFILE CHECKSUM: 710c92f00f075b579ab36b03acdb8759ecfb8c61
 
 COCOAPODS: 1.2.0.beta.1
