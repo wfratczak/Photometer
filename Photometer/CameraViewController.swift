@@ -110,7 +110,6 @@ class CameraViewController: UIViewController {
     
     @IBAction func takePhotoButtonPressed(_ sender: UIButton) {
         self.stillImageOutput.captureStillImageAsynchronously(from: self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo)) { (buffer, error) -> Void in
-            
             guard let buffer = buffer, let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer), let image = UIImage(data: imageData) else {
                 return
             }

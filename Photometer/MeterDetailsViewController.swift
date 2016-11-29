@@ -54,8 +54,6 @@ extension MeterDetailsViewController: UIImagePickerControllerDelegate, UINavigat
             try! realm.write {
                 meter.image = pickedImage
             }
-//            imageView.contentMode = .ScaleAspectFit
-//            imageView.image = pickedImage
         }
         
         dismiss(animated: true, completion: nil)
