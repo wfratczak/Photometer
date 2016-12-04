@@ -7,12 +7,18 @@
 //
 
 import XCTest
+import RealmSwift
 @testable import Photometer
 
 class PhotometerTests: XCTestCase {
     
+    var realm: Realm!
+    var meters: [Meter] = []
+    
     override func setUp() {
         super.setUp()
+        realm = try! Realm()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

@@ -20,7 +20,7 @@ class Meter: Object {
             if let dirPath        = paths.first
             {
                 let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(name)
-                return UIImage(contentsOfFile: imageURL.path)//?.normalizedImage()
+                return UIImage(contentsOfFile: imageURL.path)
             }
             return nil
         }

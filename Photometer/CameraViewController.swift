@@ -45,9 +45,7 @@ class CameraViewController: UIViewController {
     // MARK: AVFoundation
     
     func beginSession() {
-        
         self.stillImageOutput = AVCaptureStillImageOutput()
-        
         if UIDevice.current.userInterfaceIdiom == .phone && max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height) < 568.0 {
             self.captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         } else {
@@ -62,7 +60,6 @@ class CameraViewController: UIViewController {
             } catch {
                 print("AVCaptureDeviceInput Error")
             }
-            
             
             let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
             previewLayer?.frame.size = self.cameraView.frame.size
@@ -99,13 +96,11 @@ class CameraViewController: UIViewController {
                 print("captureDevice?.lockForConfiguration() denied")
             }
             
-            
             DispatchQueue.main.async(execute: {
                 self.cameraView.layer.addSublayer(previewLayer!)
                 self.captureSession.startRunning()
             })
         }
-        
     }
     
     @IBAction func takePhotoButtonPressed(_ sender: UIButton) {
@@ -113,7 +108,6 @@ class CameraViewController: UIViewController {
             guard let buffer = buffer, let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer), let image = UIImage(data: imageData) else {
                 return
             }
-            
             switch self.viewType {
             case .meter:
                 self.recognizeMeter(image: image)

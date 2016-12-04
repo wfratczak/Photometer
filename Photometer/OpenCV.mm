@@ -74,22 +74,7 @@ using namespace cv;
         double base_test1 = compareHist( hist_base, hist_test1, compare_method );
         
         [array addObject:[NSNumber numberWithDouble:base_test1]];
-        //printf( " Method [%d] Perfect, Base-Test(1) : %f, %f \n", i, base_base, base_test1 );
     }
-    
-    
-    
-//    cv::Mat imageMat;
-//    cv::Mat templateImageMat;
-//    UIImageToMat(image, imageMat);
-//    UIImageToMat(templateImage, templateImageMat);
-//
-//    
-//    cvCalcHist(<#IplImage **image#>, <#CvHistogram *hist#>)
-//    
-//    CvHistogram imageHistogram;
-//    
-//    //cvCompareHist(const CvHistogram *hist1, <#const CvHistogram *hist2#>, <#int method#>)
     return array;
 }
 
