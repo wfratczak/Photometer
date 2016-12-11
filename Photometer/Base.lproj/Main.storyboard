@@ -105,7 +105,7 @@
             <objects>
                 <navigationController id="JBB-wL-RTG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Meters" id="6YC-iH-3Cd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iCp-J7-GGc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCp-J7-GGc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -150,7 +150,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wmG-89-FyX" id="Reg-Hc-F8G">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRj-c1-3b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1481" y="-814"/>
+            <point key="canvasLocation" x="-1412" y="-815"/>
         </scene>
         <!--Charts-->
         <scene sceneID="lXS-fU-IcM">
