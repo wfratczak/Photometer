@@ -70,7 +70,6 @@ using namespace cv;
     for( int i = 0; i < 4; i++ )
     {
         int compare_method = i;
-        double base_base = compareHist( hist_base, hist_base, compare_method );
         double base_test1 = compareHist( hist_base, hist_test1, compare_method );
         
         [array addObject:[NSNumber numberWithDouble:base_test1]];

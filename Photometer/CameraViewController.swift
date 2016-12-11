@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 import AVFoundation
 import RealmSwift
 import SwiftOCR
@@ -19,22 +18,29 @@ enum CameraViewType {
 
 class CameraViewController: UIViewController {
     
+    private var recognizedMeter: Meter?
+    
+    // MARK: Outlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var viewFinder: UIView!
+    @IBOutlet weak var numbersFinderView: UIView!
     
     var viewType: CameraViewType = .meter {
         didSet {
-            viewFinder.isHidden = viewType == .meter
+            numbersFinderView.isHidden = viewType == .meter
         }
     }
+    
+    // MARK: Camera
     var stillImageOutput: AVCaptureStillImageOutput!
     let captureSession = AVCaptureSession()
     let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewFinder.isHidden = true
+        numbersFinderView.isHidden = true
         DispatchQueue.global().async {
             if(self.device != nil){
                 self.beginSession()
@@ -130,6 +136,7 @@ class CameraViewController: UIViewController {
                 max = (result?.first?.doubleValue)!
             }
         }
+        recognizedMeter = meters[recognizedIndex]
         DispatchQueue.main.async {
             self.show(meterName: meters[recognizedIndex].name)
         }
@@ -152,7 +159,21 @@ class CameraViewController: UIViewController {
             textField.text = meterValue
         }
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            guard let recognizedText = alert.textFields?.first?.text, let currentMeter = self.recognizedMeter else {
+                return
+            }
+            if let recognizedValue = Double(recognizedText) {
+                let newValue = MeterValue()
+                newValue.value = recognizedValue
+                
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(newValue)
+                    currentMeter.values.append(newValue)
+                }
+            }
             self.viewType = .meter
+            self.showAlertWithSuccess()
         }))
         alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
         self.tabBarController?.show(alert, sender: self)
@@ -169,6 +190,13 @@ class CameraViewController: UIViewController {
     
     func show(result: [NSNumber]) {
         let alert = UIAlertController(title: "Result", message: "\(result)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        show(alert, sender: self)
+    }
+    
+    func showAlertWithSuccess() {
+        let meterName = recognizedMeter?.name ?? "Meter"
+        let alert = UIAlertController(title: "Value added to \(meterName)", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         show(alert, sender: self)
     }

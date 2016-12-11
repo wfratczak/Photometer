@@ -8,10 +8,13 @@
 
 import Foundation
 import RealmSwift
+import Realm
 
 class Meter: Object {
     dynamic var name = ""
     dynamic var createdAt = NSDate()
+    var values: List<MeterValue> = List()
+    
     var image: UIImage? {
         get {
             let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory

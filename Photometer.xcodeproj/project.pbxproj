@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1530B91F1DFC4BE400AE8958 /* MeterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530B91E1DFC4BE400AE8958 /* MeterValue.swift */; };
 		15913E601DDBB02F008F3E2E /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */; };
-		15AF22161DD74AA0006E91AA /* NumbersRecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */; };
+		15D38D871DFCBC4A00F57986 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D38D861DFCBC4A00F57986 /* AboutViewController.swift */; };
 		15D420771DD644B0004117C9 /* Meter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420761DD644B0004117C9 /* Meter.swift */; };
 		15D420791DD647FD004117C9 /* MetersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D420781DD647FD004117C9 /* MetersViewController.swift */; };
 		15D4207B1DD64AE0004117C9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */; };
@@ -58,8 +59,9 @@
 
 /* Begin PBXFileReference section */
 		10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotometerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotometerUITests/Pods-PhotometerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1530B91E1DFC4BE400AE8958 /* MeterValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterValue.swift; sourceTree = "<group>"; };
 		15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersRecognizeViewController.swift; sourceTree = "<group>"; };
+		15D38D861DFCBC4A00F57986 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		15D420761DD644B0004117C9 /* Meter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meter.swift; sourceTree = "<group>"; };
 		15D420781DD647FD004117C9 /* MetersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetersViewController.swift; sourceTree = "<group>"; };
 		15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				15D4207A1DD64AE0004117C9 /* DatabaseManager.swift */,
 				15D420761DD644B0004117C9 /* Meter.swift */,
+				1530B91E1DFC4BE400AE8958 /* MeterValue.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -171,9 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				15F713021DCA211C00DC11AA /* CameraViewController.swift */,
-				15AF22151DD74AA0006E91AA /* NumbersRecognizeViewController.swift */,
 				15D4207C1DD65208004117C9 /* MeterDetailsViewController.swift */,
 				15D420781DD647FD004117C9 /* MetersViewController.swift */,
+				15D38D861DFCBC4A00F57986 /* AboutViewController.swift */,
 				15913E5F1DDBB02F008F3E2E /* ChartViewController.swift */,
 			);
 			name = ViewController;
@@ -537,7 +540,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15AF22161DD74AA0006E91AA /* NumbersRecognizeViewController.swift in Sources */,
+				1530B91F1DFC4BE400AE8958 /* MeterValue.swift in Sources */,
+				15D38D871DFCBC4A00F57986 /* AboutViewController.swift in Sources */,
 				15F713031DCA211C00DC11AA /* CameraViewController.swift in Sources */,
 				15F713011DCA211C00DC11AA /* AppDelegate.swift in Sources */,
 				15D4207B1DD64AE0004117C9 /* DatabaseManager.swift in Sources */,
@@ -746,6 +750,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotometerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerTests;
@@ -761,6 +766,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotometerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerTests;
@@ -775,6 +781,7 @@
 			baseConfigurationReference = 10BB31680302F5214973D2F0 /* Pods-PhotometerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotometerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerUITests;
@@ -789,6 +796,7 @@
 			baseConfigurationReference = 89B699E7D2ECC9EB7B6CCD69 /* Pods-PhotometerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PhotometerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wfratczak.PhotometerUITests;

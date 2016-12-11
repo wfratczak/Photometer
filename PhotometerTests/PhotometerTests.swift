@@ -18,8 +18,7 @@ class PhotometerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         realm = try! Realm()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        meters = Array(realm.objects(Meter.self))
     }
     
     override func tearDown() {
@@ -27,15 +26,21 @@ class PhotometerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testMeterImageRecognize() {
+        var recognizedIndex = 999
+        var max = 0.0
+        if let sourceImageFromFirstAvailableMeter = meters.first?.image {
+            for (index, meter) in meters.enumerated() {
+                let result = OpenCV.compare(sourceImageFromFirstAvailableMeter, with: meter.image)
+                print("Reult for meter name: \(meter.name) \(result)")
+                if (result?.first?.doubleValue)! > max {
+                    recognizedIndex = index
+                    max = (result?.first?.doubleValue)!
+                }
+            }
+            XCTAssert(recognizedIndex == 0)
+        } else {
+            print("No meters available!")
         }
     }
     

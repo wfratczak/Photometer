@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import FontAwesome_swift
 
 class MetersViewController: UITableViewController {
 
@@ -17,8 +18,9 @@ class MetersViewController: UITableViewController {
         super.viewDidLoad()
         configureView()
         loadMeters()
+        configureTabBar()
     }
-
+    
     private func loadMeters() {
         let realm = try! Realm()
         meters = Array(realm.objects(Meter.self))
@@ -40,12 +42,14 @@ class MetersViewController: UITableViewController {
         }
         let action = UIAlertAction(title: "OK", style: .default) { action in
             let meterName = alert.textFields?.first?.text
+            
             let newMeter = Meter()
             newMeter.name = meterName!
             let realm = try! Realm()
             try! realm.write {
                 realm.add(newMeter)
             }
+            
             self.loadMeters()
         }
         alert.addAction(action)
@@ -90,4 +94,16 @@ class MetersViewController: UITableViewController {
         }
     }
 
+    // MARK: Config TabBar
+    
+    private func configureTabBar() {
+        guard let tabBarController = tabBarController else {
+            return
+        }
+        tabBarController.tabBar.items![0].image = UIImage.fontAwesomeIcon(name: FontAwesome.desktop, textColor: UIColor.gray, size: CGSize(width: 32, height: 32))
+        tabBarController.tabBar.items![1].image = UIImage.fontAwesomeIcon(name: FontAwesome.cameraRetro, textColor: UIColor.gray, size: CGSize(width: 32, height: 32))
+        tabBarController.tabBar.items![2].image = UIImage.fontAwesomeIcon(name: FontAwesome.lineChart, textColor: UIColor.gray, size: CGSize(width: 32, height: 32))
+        tabBarController.tabBar.items![3].image = UIImage.fontAwesomeIcon(name: FontAwesome.infoCircle, textColor: UIColor.gray, size: CGSize(width: 32, height: 32))
+    }
+    
 }

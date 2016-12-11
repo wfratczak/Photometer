@@ -6,12 +6,14 @@ target 'Photometer' do
     use_frameworks!
 
     pod 'OpenCV', :inhibit_warnings => true
-    pod 'SVProgressHUD'
-    pod 'RealmSwift', '2.0.3'
+    pod 'RealmSwift'
     pod 'SwiftOCR', '~> 1.0'
-
+    pod 'Charts'
+    pod 'FontAwesome.swift'
+    
   target 'PhotometerTests' do
     inherit! :search_paths
+    pod 'RealmSwift', '2.0.3'
     # Pods for testing
   end
 
