@@ -1,0 +1,18 @@
+# Photometer
+Mobile image processing application for iOS
+
+Project created for Engineer thesis. Appliaction can recognize previously added objects with source images.
+
+The image recognition is based on histograms comparision.
+
+Good example of using C++ OpenCV library in  with Swift iOS project.
+
+Created using Swift 3.0, Objective-C and C++.
+
+Used technologies:
+
+* OpenCV
+* SwiftOCR
+* Realm
+* Charts
+* FontAwesome
