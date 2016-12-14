@@ -1,7 +1,7 @@
 # Photometer
 Mobile image processing application for iOS
 
-Project created for Engineer thesis. Appliaction can recognize previously added objects with source images. Potentially used for recognition of home counters/meters (water, gas, energy) and their values.
+Appliaction can recognize previously added objects with source images. Potentially used for recognition of home counters/meters (water, gas, energy) and their values.
 
 The image recognition is based on histograms comparision.
 
